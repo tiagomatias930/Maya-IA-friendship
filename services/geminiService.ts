@@ -2,8 +2,20 @@
 import { GoogleGenAI, Type, GenerateContentResponse } from "@google/genai";
 import { MAYA_SYSTEM_INSTRUCTION, APP_MODELS } from "../constants";
 
+const resolveApiKey = (): string => {
+  if (typeof import.meta !== "undefined" && import.meta.env?.VITE_API_KEY) {
+    return import.meta.env.VITE_API_KEY;
+  }
+
+  if (typeof process !== "undefined" && process.env?.API_KEY) {
+    return process.env.API_KEY;
+  }
+
+  return "";
+};
+
 export const createGeminiClient = () => {
-  return new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
+  return new GoogleGenAI({ apiKey: resolveApiKey() });
 };
 
 export const analyzeVoiceSample = async (audioBase64: string, mimeType: string): Promise<string> => {
@@ -89,7 +101,8 @@ export const generateVideoWithVeo = async (prompt: string, imageBase64?: string)
   }
 
   const downloadLink = operation.response?.generatedVideos?.[0]?.video?.uri;
-  const videoResponse = await fetch(`${downloadLink}&key=${process.env.API_KEY}`);
+  const apiKey = resolveApiKey();
+  const videoResponse = await fetch(`${downloadLink}&key=${apiKey}`);
   const blob = await videoResponse.blob();
   return URL.createObjectURL(blob);
 };
