@@ -1,0 +1,8 @@
+{
+  "name": "Maya AI - Your Virtual Companion",
+  "description": "An interactive AI companion featuring Maya. Engage in real-time voice conversations, generate custom videos, and chat with a personality-driven AI powered by the latest Gemini models.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
