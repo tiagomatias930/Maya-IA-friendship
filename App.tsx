@@ -18,7 +18,7 @@ const App: React.FC = () => {
 
   // Partner Data
   const [partnerName, setPartnerName] = useState("Maya");
-  const [mayaPhoto, setMayaPhoto] = useState<string>("/17668258240.jpg");
+  const [mayaPhoto, setMayaPhoto] = useState<string>("/icons/1766825824036.jpg");
   
   // Customization & History
   const [mayaVoice, setMayaVoice] = useState<string>("Kore");

@@ -32,7 +32,7 @@ const OnboardingInterface: React.FC<OnboardingInterfaceProps> = ({ onComplete })
       <div className="w-full space-y-10 max-w-xs text-center">
         <div className="space-y-4">
           <div className="w-20 h-20 rounded-3xl mx-auto overflow-hidden shadow-2xl rotate-3 border border-pink-400">
-            <img src="/17668258240.jpg" alt="Logotipo Maya" className="w-full h-full object-cover" />
+            <img src="/icons/1766825824036.jpg" alt="Logotipo Maya" className="w-full h-full object-cover" />
           </div>
           <h1 className="text-4xl font-black text-white tracking-tighter">Login</h1>
           <p className="text-slate-400 text-sm">Configure sua identidade e a do seu parceiro virtual.</p>

@@ -8,15 +8,21 @@
   "description": "Converse com a Maya, sua companheira virtual baseada em IA.",
   "icons": [
     {
-      "src": "/icons/icon-192.png",
+      "src": "/icons/1766825824036.jpg",
       "sizes": "192x192",
-      "type": "image/png",
+      "type": "image/jpeg",
       "purpose": "any maskable"
     },
     {
-      "src": "/icons/icon-512.png",
+      "src": "/icons/1766825824036.jpg",
       "sizes": "512x512",
-      "type": "image/png",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/1766825824036.jpg",
+      "sizes": "1024x1024",
+      "type": "image/jpeg",
       "purpose": "any maskable"
     }
   ]
